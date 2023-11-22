@@ -6,17 +6,22 @@ import os
 import time
 import pyautogui  
 import pyperclip 
-
-
-
-#카카오톡을 키는 것을 자동화 하는 함수
-def kill_kakao():
-    pass
+import datetime
 
 
 #카카오톡을 키는 것을 자동화 하는 함수
+def open_kakao():
+    try:
+        path = r"C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe"
+        subprocess.Popen(path)
+        print('opening Kakao Talk')
+    except:
+        print("cannot open KakaoTalk")
+
+
+#카카오톡을 끄는 것을 자동화 하는 함수
 def kill_kakao():
-    pass
+    os.system("TASKKILL /F /IM KakaoTalk.exe")
 
 #카카오톡 로그인을 자동화하는 함수
 def login_kakao():
