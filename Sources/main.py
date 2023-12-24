@@ -37,8 +37,7 @@ def login_kakao():
         pyautogui.press('enter')
     elif button_location_2 is not None:
         button_point = pyautogui.center(button_location_2)
-#     pyautogui.moveTo(button_point.x, button_point.y, duration=0)
-#     pyautogui.move(0, -45, 0.5, pyautogui.easeInQuad)  # Move 45 pixels Up
+
         pyautogui.doubleClick(button_point.x, button_point.y-45)
         pyautogui.write(PASSWORD)
         pyautogui.press('enter')
@@ -84,7 +83,7 @@ def find_fren(fren):
         button_point = pyautogui.center(button_location)
         time.sleep(1)
         pyautogui.click(button_point.x, button_point.y)
-#         pyautogui.click(button_point.x, button_point.y)
+
         
 
         pyperclip.copy(fren)
